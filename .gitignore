@@ -40,7 +40,6 @@ build/
 .DS_Store
 /.idea/
 /.trae/
-/CLAUDE.md
 
 ### .md ###
 *.trae
