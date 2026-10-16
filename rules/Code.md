@@ -2,60 +2,56 @@
 
 ## 1. Think Before Coding
 
-**Do not assume. Do not hide confusion. Present trade-offs.**
+**Don't assume. Don't hide confusion. Surface tradeoffs.**
 
-LLMs routinely settle on one interpretation silently and then execute it. This principle forces the reasoning into the open:
+Before implementing:
 
-- **State your assumptions explicitly** — when unsure, ask rather than guess
-- **Present multiple interpretations** — when something is ambiguous, do not quietly pick one
-- **Disagree when warranted** — if a simpler approach exists, say so
-- **Stop when confused** — point out what is unclear and ask for clarification
+- State your assumptions explicitly. If uncertain, ask.
+- If multiple interpretations exist, present them - don't pick silently.
+- If a simpler approach exists, say so. Push back when warranted.
+- If something is unclear, stop. Name what's confusing. Ask.
 
 ## 2. Simplicity First
 
-**Solve the problem with the least code. Do not speculate about the future.**
+**Minimum code that solves the problem. Nothing speculative.**
 
-Counteract the pull toward over-engineering:
+- No features beyond what was asked.
+- No abstractions for single-use code.
+- No "flexibility" or "configurability" that wasn't requested.
+- No error handling for impossible scenarios.
+- If you write 200 lines and it could be 50, rewrite it.
 
-- Do not add features beyond what was requested
-- Do not create abstractions for one-off code
-- Do not add unrequested "flexibility" or "configurability"
-- Do not write error handling for scenarios that cannot occur
-- If 200 lines can be rewritten in 50, rewrite it
+Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
 
-**Test:** would a senior engineer consider this overly complex? If so, simplify.
+## 3. Surgical Changes
 
-## 3. Precise Edits
-
-**Touch only what must be touched. Clean up only your own mess.**
+**Touch only what you must. Clean up only your own mess.**
 
 When editing existing code:
 
-- Do not "improve" adjacent code, comments, or formatting
-- Do not refactor what is not broken
-- Match the existing style even when you would prefer a different one
-- If you notice unrelated dead code, mention it — do not delete it
+- Don't "improve" adjacent code, comments, or formatting.
+- Don't refactor things that aren't broken.
+- Match existing style, even if you'd do it differently.
+- If you notice unrelated dead code, mention it - don't delete it.
 
-When your change produces orphaned code:
+When your changes create orphans:
 
-- Remove imports, variables, and functions that your change made obsolete
-- Do not remove pre-existing dead code unless asked
+- Remove imports/variables/functions that YOUR changes made unused.
+- Don't remove pre-existing dead code unless asked.
 
-**Test:** every changed line should trace directly back to the user's request.
+The test: Every changed line should trace directly to the user's request.
 
 ## 4. Goal-Driven Execution
 
-**Define success criteria. Loop until they are met.**
+**Define success criteria. Loop until verified.**
 
-Turn imperative instructions into verifiable goals:
+Transform tasks into verifiable goals:
 
-| Instead of...       | Convert to...                                            |
-| ------------------- | -------------------------------------------------------- |
-| "Add validation"    | "Write tests for invalid input, then make them pass"      |
-| "Fix the bug"       | "Write a test that reproduces the bug, then make it pass" |
-| "Refactor X"        | "Ensure the tests pass both before and after"             |
+- "Add validation" → "Write tests for invalid inputs, then make them pass"
+- "Fix the bug" → "Write a test that reproduces it, then make it pass"
+- "Refactor X" → "Ensure tests pass before and after"
 
-For multi-step tasks, state a short plan:
+For multi-step tasks, state a brief plan:
 
 ```
 1. [Step] → verify: [check]
@@ -63,7 +59,7 @@ For multi-step tasks, state a short plan:
 3. [Step] → verify: [check]
 ```
 
-Strong success criteria let the LLM iterate independently. Weak ones ("make it work") require constant clarification.
+Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
 ## 5. Basic Communication Standards
 
