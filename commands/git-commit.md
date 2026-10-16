@@ -1,5 +1,5 @@
 ---
-description: Analyze the current working-tree changes, generate an English commit message following the Conventional Commits specification, and complete the commit
+description: Analyze the current working-tree changes, generate a Chinese commit message following the Conventional Commits specification, and complete the commit
 ---
 
 # /git-commit Command
@@ -142,7 +142,7 @@ Changes: N added / M modified / K deleted
 ```
 
 - `scope` is **optional** and denotes the affected area (such as `auth`, `api`, `ui`). Omit the parentheses when there is no clear scope: `feat: add user login module`.
-- `subject` is written in English, states in one line what was done, stays under 50 characters, and takes no trailing period.
+- `subject` is written in Chinese, states in one line what was done, stays under 50 characters, and takes no trailing period.
 - `body` explains *why* the change was made and *what* changed; it may be a bulleted list. Omit the entire section when there is no body.
 - `footer` carries references such as `Closes #123` or `Refs #45`. Omit the entire section when there is none.
 - Breaking changes: add `!` after the type or scope (for example `feat(api)!: remove v1 endpoints`), and write `BREAKING CHANGE: <impact>` in the footer.

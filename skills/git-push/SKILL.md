@@ -1,6 +1,6 @@
 ---
 name: git-push
-description: Use only when the user explicitly runs the /git-push command; never invoke proactively. Lists changed files for the user to tick, then commits, rebases to sync with the remote, and pushes safely; on a sync conflict, rolls back and prints a report.
+description: Use only when the user explicitly runs the /git-push command; never invoke proactively. Lists changed files for the user to tick, then commits, rebases to sync with the remote, and pushes safely; on a sync conflict, rolls back and prints a Chinese report.
 ---
 
 # /git-push Command
@@ -54,7 +54,7 @@ Branch handling:
 
 ### 3. Commit
 
-Generate an English commit message per the `git-commit` skill's specification, then stage **path by path** according to the selection (separate with `--` and quote each, to tolerate spaces, CJK characters, and shell metacharacters; pass renamed entries by their new path):
+Generate a Chinese commit message per the `git-commit` skill's specification, then stage **path by path** according to the selection (separate with `--` and quote each, to tolerate spaces, CJK characters, and shell metacharacters; pass renamed entries by their new path):
 
 ```bash
 git add -- "<path1>" "<path2>"

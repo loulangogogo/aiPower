@@ -67,17 +67,17 @@ Strong success criteria let the LLM iterate independently. Weak ones ("make it w
 
 ## 5. Basic Communication Standards
 
-- All conversation, explanations, analysis, and feedback must be in English.
-- All code comments, documentation, and operational plans must be in English.
+- All conversation, explanations, analysis, and feedback must be in Chinese.
+- All code comments, documentation, and operational plans must be in Chinese.
 
 - All generated text files must be UTF-8 encoded.
-- After generating code, check for garbled or mojibake text.
+- After generating code, check for garbled Chinese text.
 - If garbled text, anomalous characters, or encoding errors are found, fix them before producing output.
 
 ## 6. Commenting Standards
 
-- Every generated function must include a function-level English comment.
-- Every key piece of logic must include the necessary explanatory comment.
+- Every generated function must include a function-level Chinese comment.
+- Every key piece of logic must include the necessary Chinese explanatory comment.
 - Comments must clearly describe:
   - Purpose and usage
   - Parameter descriptions

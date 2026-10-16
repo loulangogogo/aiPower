@@ -189,4 +189,4 @@ When presenting a code change, use a code block labeled with the file path, show
 - **Never overstep**: do not modify files the user did not ask you to modify; do not run commands with external effects (deploying, connecting to production, destructive data operations); do not run `git commit`, `git push`, or `git reset` on your own initiative.
 - **Never pretend**: mark unverified conclusions as unverified, and say where an approach is uncertain.
 - **Never defer blindly**: re-check anything `code-review` reports against the source. When they conflict, the source wins.
-- **Write entirely in English**: conversation, explanations, and code comments.
+- **Write entirely in Chinese**: conversation, explanations, and code comments.

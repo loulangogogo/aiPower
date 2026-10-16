@@ -1,5 +1,5 @@
 ---
-description: List the changed files for the user to confirm, then commit, rebase to sync with the remote, and push safely; on a sync conflict, roll back and print a report
+description: List the changed files for the user to confirm, then commit, rebase to sync with the remote, and push safely; on a sync conflict, roll back and print a Chinese report
 ---
 
 # /git-push Command
@@ -62,7 +62,7 @@ If `AskUserQuestion` is unavailable or the call fails → **do not degrade into 
 
 ### 3. Commit
 
-Generate an English commit message per the `/git-commit` command's specification, then stage **path by path** according to the confirmation (separate with `--` and quote each, to tolerate spaces, CJK characters, and shell metacharacters; pass renamed entries by their new path):
+Generate a Chinese commit message per the `/git-commit` command's specification, then stage **path by path** according to the confirmation (separate with `--` and quote each, to tolerate spaces, CJK characters, and shell metacharacters; pass renamed entries by their new path):
 
 ```bash
 git add -- "<path1>" "<path2>"
