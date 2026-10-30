@@ -5,5 +5,5 @@
 For any Python-related operation:
 
 - Prefer the `python3` command.
-- Use the `pip3` command sparingly.
+- Prefer the `pip3` command.
 - Never default to `python` or `pip`.
