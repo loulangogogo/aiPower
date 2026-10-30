@@ -1,6 +1,7 @@
 ---
 name: git-push
 description: Use only when the user explicitly runs the /git-push command; never invoke proactively. Lists changed files for the user to tick, then commits, rebases to sync with the remote, and pushes safely; on a sync conflict, rolls back and prints a Chinese report.
+disable-model-invocation: true
 ---
 
 # /git-push Command

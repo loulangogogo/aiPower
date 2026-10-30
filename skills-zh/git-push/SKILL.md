@@ -1,6 +1,7 @@
 ---
 name: git-push
 description: 仅在用户显式执行 /git-push 命令时使用，不得主动调用。列出变更文件供用户勾选后提交，先 rebase 同步远程再安全推送；同步冲突则回滚并输出中文报告。
+disable-model-invocation: true
 ---
 
 # /git-push 命令
